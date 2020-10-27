@@ -1,74 +1,72 @@
 .main-header{
     font-size: 70px;
-    margin-bottom: 70px;
+    margin-bottom: 20px;
 }
 
-* {
-  margin: 0;
-  padding: 0;   
+*{
+    margin: 0;
+    padding: 0;
 }
 
-.container {
+.container{
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column;   
     width: 70vw;
 }
 
 .empty-state__title,
-.empty-state__description {
+.empty-state__description{
     margin-bottom: 20px;
-}  
+}
 
-.empty-state {
+.empty-state{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    display: none;
 }
 
-form {
+form{
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
 
-input[type="text"] {
+input[type="text"]{
     width: 100%;
     padding: 10px;
     border-radius: 4px;
-    border: 3px solid #333;
+    border: 3px solid #333
 }
 
 .todo-list {
     list-style: none;
     margin-bottom: 20px;
-}
-
-.todo-list {
+  }
+  
+  .todo-item {
     margin-bottom: 10px;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-.todo-item span {
+  }
+  
+  .todo-item span {
     flex-grow: 1;
     margin-left: 10px;
     margin-right: 10px;
     font-size: 22px;
-}
-
-.done span {
+  }
+  
+  .done span {
     text-decoration: line-through;
-}
-
-input[type="checkbox"] {
+  }
+  
+  input[type="checkbox"] {
     display: none;
-}
-
-.tick {
+  }
+  
+  .tick {
     width: 30px;
     height: 30px;
     border: 3px solid #333;
@@ -77,29 +75,36 @@ input[type="checkbox"] {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-}
-
-.tick::before {
-    content: "*";
+  }
+  
+  .tick::before {
+    content: '✓';
     font-size: 20px;
     display: none;
-}
-
-.done .tick::before {
+  }
+  
+  .done .tick::before {
     display: inline;
-}
-
-.delete-todo {
+  }
+  
+  .delete-todo {
     border: none;
     background-color: transparent;
     outline: none;
     cursor: pointer;
-    font-size: 30px;
-    color: red;
-}
-
-.delete-todo svg {
+  }
+  
+  .delete-todo svg {
     width: 30px;
     height: 30px;
     pointer-events: none;
+  }
+  
+body{
+  display: flex;
+  justify-content: center;
+}
+
+.todo-list:empty + .empty-state {
+    display:flex;
 }
